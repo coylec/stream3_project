@@ -1,4 +1,4 @@
-{% load static %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +12,10 @@
     <title>Scrolling Nav - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href={% components "bower_components/bootstrap/dist/css/bootstrap.css/bootstrap.min.css" %} >
+    <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.css/bootstrap.min.css' %}">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href={% components "bower_components/bootstrap/dist/css/scrolling-nav.css" %} >
+    <link rel="stylesheet" href="{% static 'bootstrap/dist/css/scrolling-nav.css' %}">
 
 </head>
 
@@ -59,16 +59,21 @@
         <!-- /.container -->
     </nav>
 
+    <div class="container">
+       {% block content %}
+       {% endblock %}
+    </div>
+
 
     <!-- jQuery -->
-    <script src="components/bower_components/jquery/dist/jquery.js/jquery.min.js"></script>
+    <script src="{% static 'jquery/dist/jquery.js/jquery.min.js' %}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="components/bower_components/bootstrap/dist/js/bootstrap.js/bootstrap.min.js"></script>
+    <script src="{% static 'bootstrap/dist/js/bootstrap.js/bootstrap.min.js' %}"></script>
 
     <!-- Scrolling Nav JavaScript -->
-    <script src="components/bower_components/bootstrap/dist/js/jquery.easing.min.js"></script>
-    <script src="components/bower_components/bootstrap/dist/js/scrolling-nav.js"></script>
+    <script src="{% static 'bootstrap/dist/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'bootstrap/dist/js/scrolling-nav.js' %}"></script>
 
 </body>
 

@@ -120,7 +120,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_FINDER = ('djangobower.finders.BowerFinder',)
+STATICFILES_FINDERS = (
+                        'django.contrib.staticfiles.finders.FileSystemFinder',
+                        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+                        'djangobower.finders.BowerFinder',
+                       )
+
 
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')
 
