@@ -25,7 +25,7 @@ SECRET_KEY = 'im@erkv_mstkwg7p1sf66#37zb*sc^ostzk*^p@!0%g%8b3oly'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'djangobower',
 ]
+
+# TEMPLATE_LOADERS = (
+#    'django.template.loaders.filesystem.Loader',
+#   'django.template.loaders.app_directories.Loader',
+# )
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -119,6 +124,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
 
 STATICFILES_FINDERS = (
                         'django.contrib.staticfiles.finders.FileSystemFinder',
