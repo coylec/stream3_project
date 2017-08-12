@@ -3,12 +3,11 @@
 {% block content %}
 
      <!-- Intro Section -->
-    <section id="intro" class="intro-section">
+    <section id="intro" class="intro-section intro-style">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Scrolling Nav</h1>
-                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
+                    <p><img src="{% static 'images/home_banner2.jpg' %}" alt=""></p>
                     <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
                 </div>
             </div>
@@ -16,11 +15,29 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about-section section-style">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>About Section</h1>
+                    <h1>About Us</h1>
+                    <p>Mr. Crumb is a multi-award winning food company based in the rural village of Finea in Ireland's lakelands.<br>
+                    We have been described by Checkout Magazine as "One of Ireland's great success stories".</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Mr. Crumb was founded in 1996 by Bernard Coyle, the current Chairman. He was working as a salesman for a major bakery when he noticed a gap in the market for fresh breadcrumb as an ingredient for stuffing, bread sauce, puddings etc. He decided to quit his job, take a chance and go out on his own. Having had initial difficulty getting the breadcrumb listed with the retailers, he decided to move up the value chain and make the actual stuffing. The rest is history. Mr Crumb took a market sector which was declining by more than 20% per annum and reversed the trend creating over 25% market growth per annum.<br>
+                        <hr>
+                        The company has three times been voted Ireland’s Best Business: “Outstanding Irish Business”(2004), ”Irish Small Business of the Year”(2005), ”Irish Enterprise of the Year”(2014).<br>
+                        We have also won numerous awards for the quality and taste of our products: Great Taste, Blas na hEireann & Irish Quality Food Awards. The company is now a major local employer and a trailblazing exporter (runner up in “Irish Exporter of the Year” Food & Drink Category in both 2012 and again in 2013).<br>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <figure>
+                        <img src="{% static 'images/about_homepage.jpg' %}" alt="Jason Coyle Director">
+                        <figcaption>Jason Coyle - Company Director</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -31,9 +48,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Services Section</h1>
+                    <h1>Our Products</h1>
+                    <p>Mr. Crumb's unique selling points are that the products are produced in small batches, in a state of the art facility, by artisanal methods, whereby products are either hand cooked or hand finished.
+                        As a result, Mr. Crumb works in partnership with leading retailers & food manufacturers in Ireland, the UK, France, Germany and Scandinavia.<br>
+                        While we're best known for our stuffing and breadcrumb, the product range, both chilled and frozen, can be segmented into 2 categories:
+                    </p>
+                    <hr>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>1. Ready to Cook Value Added Ingredients such as fresh breadcrumb, stuffing, toppings, cheese melts and flavoured butters.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>2. Ready to Cook Snack Foods such as filled paninis, wraps, burritos and bruschetta.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{%  static 'images/products_cat1.jpg' %}" alt="Stuffing & breadcrumb products">
+                </div>
+                <div class="col-md-6">
+                    <img src="{%  static 'images/products_cat2.jpg' %}" alt="Panini, burrito & wrap products">
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -42,7 +81,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Contact Section</h1>
+                    <h1>Contact Us</h1>
                 </div>
             </div>
         </div>
