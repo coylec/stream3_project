@@ -26,6 +26,7 @@ SECRET_KEY = 'im@erkv_mstkwg7p1sf66#37zb*sc^ostzk*^p@!0%g%8b3oly'
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
+SITE_ID = 1
 
 
 # Application definition
@@ -38,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'djangobower',
+    'home',
+    'django_forms_bootstrap',
 ]
 
 # TEMPLATE_LOADERS = (
@@ -86,6 +89,7 @@ DATABASES = {
     }
 }
 
+ACCOUNT_ACTIVATION_DAYS = 7
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -146,3 +150,12 @@ BOWER_INSTALLED_APPS = (
 )
 
 # TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'conradcoyle@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+SERVER_EMAIL = 'conradcoyle@gmail.com'
+DEFAULT_FROM_EMAIL = "MrCrumb"
