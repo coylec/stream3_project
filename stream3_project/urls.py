@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.get_index, name='index'),
     url(r'^accounts/', include('registration.backends.hmac.urls')),
+    url(r'^accounts/profile', views.get_profile, name='profile'),
 ]

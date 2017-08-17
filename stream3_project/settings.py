@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'djangobower',
     'home',
     'django_forms_bootstrap',
+    'anymail',
 ]
 
 # TEMPLATE_LOADERS = (
@@ -151,11 +152,10 @@ BOWER_INSTALLED_APPS = (
 
 # TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'conradcoyle@gmail.com'
-EMAIL_HOST_PASSWORD = ''
-SERVER_EMAIL = 'conradcoyle@gmail.com'
-DEFAULT_FROM_EMAIL = "MrCrumb"
+ANYMAIL = {
+    "MAILGUN_API_KEY": "",
+    "MAILGUN_SENDER_DOMAIN": '',
+}
+
+EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
+DEFAULT_FROM_EMAIL = "you@example.com"

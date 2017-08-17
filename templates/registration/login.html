@@ -3,7 +3,7 @@
 
 {% block content %}
     <div class="container login-pages">
-        <form method="post" action="../">
+        <form method="post" action="{% url 'auth_login' %}">
             {% csrf_token %}
             {{ form.as_p }}
 
