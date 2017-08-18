@@ -17,6 +17,7 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 from home import views
+from contact import views as contact_views
 
 
 urlpatterns = [
@@ -24,4 +25,6 @@ urlpatterns = [
     url(r'^$', views.get_index, name='index'),
     url(r'^accounts/', include('registration.backends.hmac.urls')),
     url(r'^accounts/profile', views.get_profile, name='profile'),
+    url(r'^contact/', contact_views.contact, name='contact'),
+    url(r'^success/$', contact_views.success, name='success'),
 ]

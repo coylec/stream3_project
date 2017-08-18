@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'home',
     'django_forms_bootstrap',
     'anymail',
+    'contact',
 ]
 
 # TEMPLATE_LOADERS = (

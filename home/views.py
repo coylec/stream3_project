@@ -9,6 +9,6 @@ def get_index(request):
     return render(request, 'index.html')
 
 
-@login_required(login_url='/login/')
+@login_required(login_url='accounts/login/')
 def get_profile(request):
     return render(request, 'registration/profile.html')
