@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'im@erkv_mstkwg7p1sf66#37zb*sc^ostzk*^p@!0%g%8b3oly'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = ['localhost']
 SITE_ID = 1
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'anymail',
     'contact',
+    'captcha',
 ]
 
 # TEMPLATE_LOADERS = (
@@ -154,9 +156,15 @@ BOWER_INSTALLED_APPS = (
 # TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
 
 ANYMAIL = {
-    "MAILGUN_API_KEY": "",
-    "MAILGUN_SENDER_DOMAIN": '',
+    "MAILGUN_API_KEY": config('MAILGUN_KEY'),
+    "MAILGUN_SENDER_DOMAIN": config('MAILGUN_SENDER'),
 }
 
 EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
-DEFAULT_FROM_EMAIL = "you@example.com"
+DEFAULT_FROM_EMAIL = config('FROM_EMAIL')
+
+
+RECAPTCHA_PUBLIC_KEY = config('CAP_PUB_KEY')
+RECAPTCHA_PRIVATE_KEY = config('CAP_PRI_KEY')
+
+NOCAPTCHA = config('NOCAPTCHA', cast=bool)

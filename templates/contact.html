@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
-{% block title %}Contact - {{ block.super }}{% endblock %}
+{% load bootstrap_tags %}
 
 {% block content %}
     <div class="container contact-form">
-        <h1>Send Us A Message</h1>
-        <form action="" method="post">
+        <form role="form" action="" method="post">
+            <legend>Send Us A Message</legend>
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Submit</button>
+            {{ form | as_bootstrap }}
+            <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </form>
     </div>
 {% endblock %}
