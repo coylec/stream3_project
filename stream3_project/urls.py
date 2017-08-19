@@ -18,6 +18,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from home import views
 from contact import views as contact_views
+from django.views.static import serve
+from .settings import MEDIA_ROOT
 
 
 urlpatterns = [
@@ -27,4 +29,6 @@ urlpatterns = [
     url(r'^accounts/profile', views.get_profile, name='profile'),
     url(r'^contact/', contact_views.contact, name='contact'),
     url(r'^success/$', contact_views.success, name='success'),
+    url(r'', include('blog.urls')),
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 ]

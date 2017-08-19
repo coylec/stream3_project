@@ -39,12 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'djangobower',
     'home',
     'django_forms_bootstrap',
     'anymail',
     'contact',
     'captcha',
+    'blog',
+    'disqus',
 ]
 
 # TEMPLATE_LOADERS = (
@@ -168,3 +171,8 @@ RECAPTCHA_PUBLIC_KEY = config('CAP_PUB_KEY')
 RECAPTCHA_PRIVATE_KEY = config('CAP_PRI_KEY')
 
 NOCAPTCHA = config('NOCAPTCHA', cast=bool)
+
+DISQUS_WEBSITE_SHORTNAME = config('DISQUS_NAME')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
