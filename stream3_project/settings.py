@@ -48,6 +48,11 @@ INSTALLED_APPS = [
     'captcha',
     'blog',
     'disqus',
+    'shop',
+    'cart',
+    'orders',
+    'paypal.standard.ipn',
+    'payment',
 ]
 
 # TEMPLATE_LOADERS = (
@@ -78,6 +83,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',
             ],
         },
     },
@@ -174,5 +180,10 @@ NOCAPTCHA = config('NOCAPTCHA', cast=bool)
 
 DISQUS_WEBSITE_SHORTNAME = config('DISQUS_NAME')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
+
+CART_SESSION_ID = 'cart'
+
+PAYPAL_RECEIVER_EMAIL = 'conradcoyle-facilitator@gmail.com'
+PAYPAL_TEST = True

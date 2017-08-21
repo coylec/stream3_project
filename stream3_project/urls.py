@@ -20,6 +20,7 @@ from home import views
 from contact import views as contact_views
 from django.views.static import serve
 from .settings import MEDIA_ROOT
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -31,4 +32,12 @@ urlpatterns = [
     url(r'^success/$', contact_views.success, name='success'),
     url(r'', include('blog.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+    url(r'^cart/', include('cart.urls', namespace='cart')),
+    url(r'^orders/', include('orders.urls', namespace='orders')),
+    url(r'^paypal/', include('paypal.standard.ipn.urls')),
+    url(r'^payment/', include('payment.urls', namespace='payment')),
+    url(r'^', include('shop.urls', namespace='shop')),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
