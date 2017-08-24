@@ -3,11 +3,11 @@
 {% block content %}
 
      <!-- Intro Section -->
-    <section id="intro" class="intro-section intro-style">
+    <section id="intro" class="intro-section banner-style">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p><img src="{% static 'images/home_banner2.jpg' %}" alt=""></p>
+                    <p><img src="{% static 'images/home_banner2.jpg' %}" class="img-responsive center-block" alt=""></p>
                     <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
                 </div>
             </div>
@@ -27,15 +27,16 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <p>Mr. Crumb was founded in 1996 by Bernard Coyle, the current Chairman. He was working as a salesman for a major bakery when he noticed a gap in the market for fresh breadcrumb as an ingredient for stuffing, bread sauce, puddings etc. He decided to quit his job, take a chance and go out on his own. Having had initial difficulty getting the breadcrumb listed with the retailers, he decided to move up the value chain and make the actual stuffing. The rest is history. Mr Crumb took a market sector which was declining by more than 20% per annum and reversed the trend creating over 25% market growth per annum.<br>
+                    <p>Mr. Crumb was founded in 1996 by Bernard Coyle, the current Chairman. He was working as a salesman for a major bakery when he noticed a gap in the market for fresh breadcrumb as an ingredient for stuffing, bread sauce, puddings etc. He decided to quit his job, take a chance and go out on his own. Having had initial difficulty getting the breadcrumb listed with the retailers, he decided to move up the value chain and make the actual stuffing. The rest is history. Mr Crumb took a market sector which was declining by more than 20% per annum and reversed the trend creating over 25% market growth per annum.</p>
                         <hr>
+                    <p>
                         The company has three times been voted Ireland’s Best Business: “Outstanding Irish Business”(2004), ”Irish Small Business of the Year”(2005), ”Irish Enterprise of the Year”(2014).<br>
-                        We have also won numerous awards for the quality and taste of our products: Great Taste, Blas na hEireann & Irish Quality Food Awards. The company is now a major local employer and a trailblazing exporter (runner up in “Irish Exporter of the Year” Food & Drink Category in both 2012 and again in 2013).<br>
+                        We have also won numerous awards for the quality and taste of our products: Great Taste, Blas na hEireann & Irish Quality Food Awards. The company is now a major local employer and a trailblazing exporter (runner up in “Irish Exporter of the Year” Food & Drink Category in both 2012 and again in 2013).
                     </p>
                 </div>
                 <div class="col-md-6">
                     <figure>
-                        <img src="{% static 'images/about_homepage.jpg' %}" alt="Jason Coyle Director">
+                        <img src="{% static 'images/about_homepage.jpg' %}" class="img-responsive" alt="Jason Coyle Director">
                         <figcaption>Jason Coyle - Company Director</figcaption>
                     </figure>
                 </div>
@@ -56,7 +57,7 @@
                     <hr>
                 </div>
             </div>
-            <div class="row">
+            <div class="row products_home">
                 <div class="col-md-6">
                     <p>1. Ready to Cook Value Added Ingredients such as fresh breadcrumb, stuffing, toppings, cheese melts and flavoured butters.</p>
                 </div>
@@ -65,11 +66,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <img src="{%  static 'images/products_cat1.jpg' %}" alt="Stuffing & breadcrumb products">
+                <div class="col-md-3">
+                    <img src="{%  static 'images/sageonion_homepage.jpg' %}" class="img-responsive" alt="Stuffing & breadcrumb products">
+                </div>
+                <div class="col-md-3">
+                    <img src="{%  static 'images/sageonion_glutenfree_homepage.jpg' %}" class="img-responsive" alt="Stuffing & breadcrumb products">
                 </div>
                 <div class="col-md-6">
-                    <img src="{%  static 'images/products_cat2.jpg' %}" alt="Panini, burrito & wrap products">
+                    <img src="{%  static 'images/mr_deli_homepage.jpg' %}" class="img-responsive center-block" alt="Panini, burrito & wrap products">
                 </div>
             </div>
 
@@ -103,7 +107,7 @@
                 </div>
                 <div class="col-md-6">
                     <figure>
-                        <img src="{% static 'images/location_map.jpg' %}" alt="Mr Crumb locations">
+                        <img src="{% static 'images/location_map.jpg' %}" class="img-responsive" alt="Mr Crumb locations">
                         <figcaption>Mr Crumb locations</figcaption>
                     </figure>
                 </div>

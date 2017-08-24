@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
     {% for post in posts %}
-        <div class="row blog-style">
+        <div class="row">
+        <div class="col-md-12 blog-style">
+                <img src="{% static 'images/sainsburys_launch_banner.jpg' %}" class="img-responsive center-block" alt="Mr Crumb Products">
+            </div>
+        </div>
+        <div class="row">
             <hr>
             <div class="col-md-2 col-sm-3 text-center">
                 <a class="story-img" href="#">
-                    <img src="http://placehold.it/100" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
+                    <img src="{% static 'images/great_taste_2017_blog.jpg' %}" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
                 </a>
             </div>
             <div class="col-md-10 col-sm-9">
@@ -20,7 +26,9 @@
                 </div>
             </div>
             <hr>
+            {% if user.is_staff %}
             <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>
+            {% endif %}
         </div>
     {% endfor %}
 {% endblock %}

@@ -9,7 +9,7 @@
 .shopping-cart-style {
     margin-top: 200px;
 }
-.intro-style {
+.banner-style {
     background-color: black;
 }
 .section-style {
@@ -17,6 +17,9 @@
 }
 .contact-style {
     background-color: white;
+}
+.shop-style {
+    margin-top: 200px;
 }
 h2 {
     font-size: 1.5em;
@@ -84,3 +87,14 @@ h2 {
 .txt-container {
     overflow: hidden;
     height: 100px;
+}
+.product-img {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 350px;
+    max-height: 350px;
+}
+.products_home{
+    margin-bottom: 10px;
+}
+
