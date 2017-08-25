@@ -29,7 +29,7 @@ urlpatterns = [
     url(r'^accounts/', include('registration.backends.hmac.urls')),
     url(r'^accounts/profile', views.get_profile, name='profile'),
     url(r'^contact/', contact_views.contact, name='contact'),
-    url(r'^success/$', contact_views.success, name='success'),
+    url(r'^success/', contact_views.success, name='success'),
     url(r'', include('blog.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^cart/', include('cart.urls', namespace='cart')),

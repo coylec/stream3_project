@@ -158,6 +158,7 @@ ul.errorlist {
 }
 
 #main {
+    padding-top: 20px;
     /*float:left;*/
     /*width: 96%;*/
     /*margin-right:-220px;*/
@@ -170,6 +171,7 @@ ul.errorlist {
     /*float:left;*/
     text-align:center;
     /*line-height:1.2;*/
+    font-size: 20px;
 }
 
 .product-list .item img {

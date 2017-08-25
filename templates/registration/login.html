@@ -3,18 +3,20 @@
 {% load bootstrap_tags %}
 
 {% block content %}
-    <div class="container login-pages">
-        <h1>Login</h1>
-        <p>Please Login or Register to use our online store</p>
-        <form method="post" action="{% url 'auth_login' %}">
-            {% csrf_token %}
-            {{ form | as_bootstrap }}
+    <div class="row login-pages">
+        <div class="col-md-12">
+            <h1>Login</h1>
+            <p>Please Login or Register to use our online store</p>
+            <form method="post" action="{% url 'auth_login' %}">
+                {% csrf_token %}
+                {{ form | as_bootstrap }}
 
-            <input type="submit" value="{% trans 'Log in' %}" />
-            <input type="hidden" name="next" value="{{ next }}" />
-        </form>
+                <input type="submit" value="{% trans 'Log in' %}" />
+                <input type="hidden" name="next" value="{{ next }}" />
+            </form>
 
-        <p>{% trans "Forgot password" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
-        <p>{% trans "Not a member" %}? <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>
+            <p>{% trans "Forgot password" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
+            <p>{% trans "Not a member" %}? <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>
+        </div>
     </div>
 {% endblock %}
