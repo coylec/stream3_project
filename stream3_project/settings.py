@@ -27,7 +27,7 @@ SECRET_KEY = 'im@erkv_mstkwg7p1sf66#37zb*sc^ostzk*^p@!0%g%8b3oly'
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = ['localhost']
-SITE_ID = 1
+SITE_ID = 2
 
 
 # Application definition

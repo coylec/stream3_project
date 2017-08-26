@@ -99,4 +99,8 @@ h2 {
 .products_home{
     margin-bottom: 10px;
 }
+#map {
+    width: 100%;
+    height: 400px;
+}
 
