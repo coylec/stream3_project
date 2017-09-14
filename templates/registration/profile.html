@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="row login-pages">
+    <div id="profile" class="row login-pages">
         <div class="col-md-12">
             <h1>Welcome To Your Profile</h1>
             <p>You are logged in as {{ user.username }}</p>
+            <h2>Account Details</h2>
+            <p>Account Created: {{ user.date_joined }}</p>
+            <p>Email Address: {{ user.email }}</p>
         </div>
     </div>
 {% endblock %}

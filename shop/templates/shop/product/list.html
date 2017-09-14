@@ -27,11 +27,14 @@
 
                     <hr>
 
-                    <p>Please Login or Register to use our online store</p>
-                    <button type="button" class="btn btn-primary" onclick=location.href="{% url 'auth_login' %}?next={{request.path}}">Login</button>
-                    <button type="button" class="btn btn-primary" onclick=location.href="{% url 'registration_register' %}?next={{request.path}}">Register</button>
+                    {% if user.is_authenticated %}
+                        <p class="shop-text">Welcome {{ user.username }}</p>
+                    {% else %}
+                    <p class="shop-text">Please Login or Register to use our online store</p>
+                        <button type="button" class="btn btn-primary" onclick=location.href="{% url 'auth_login' %}?next={{request.path}}">Login</button>
+                        <button type="button" class="btn btn-primary" onclick=location.href="{% url 'registration_register' %}?next={{request.path}}">Register</button>
+                    {% endif %}
                     </div>
-
                 </div>
 
                 <div class="col-md-9">
@@ -43,7 +46,7 @@
                                     <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}" class="img-responsive product-img center-block" >
                                 </a>
                                 <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
-                                ${{ product.price }}
+                                €{{ product.price }}
                             </div>
                         {% endfor %}
                     </div>

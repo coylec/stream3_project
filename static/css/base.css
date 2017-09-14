@@ -181,6 +181,8 @@ ul.errorlist {
 
 .product-detail {
     text-align:justify;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size: medium;
 }
 
 .product-detail .price {
@@ -201,6 +203,9 @@ ul.errorlist {
 
 .product-detail h2 {
     margin-top:10px;
+}
+.product-description {
+    padding-top: 10px;
 }
 
 .order-form {

@@ -18,6 +18,10 @@
                     {% endfor %}
                 </ul>
                 <p>Total: ${{ cart.get_total_price }}</p>
+
+                <hr>
+
+                <button type="button" class="btn" onclick=location.href="{% url 'cart:cart_detail' %}">Edit Cart</button>
             </div>
 
             <form action="." method="post" class="order-form">

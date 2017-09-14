@@ -24,7 +24,13 @@
                         <button type="button" class="btn btn-primary" onclick=location.href="{% url 'auth_login' %}?next={{request.path}}">Add to cart</button>
                     </div>
                 {% endif %}
-                {{ product.description|linebreaks }}
+
+                <p class="product-description">{{ product.description|linebreaks }}</p>
+
+                <button type="button" class="btn" onclick=location.href="{% url 'shop:product_list' %}">Return to Product List</button>
+                {% if user.is_authenticated %}
+                    <button type="button" class="btn" onclick=location.href="{% url 'orders:order_create' %}">Checkout</button>
+                {% endif %}
             </div>
         </div>
     </div>
