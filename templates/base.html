@@ -18,6 +18,9 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap-paper-theme.min.css' %}">
 
+    <!-- jQuery-Confirm CSS -->
+    <link rel="stylesheet" href="{% static 'jquery-confirm2/dist/jquery-confirm.min.css' %}">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'bootstrap/dist/css/scrolling-nav.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -89,7 +92,7 @@
                     </li>
                     <li>
                         {% if user.is_authenticated %}
-                            <a class="navlink-style" href="{% url 'auth_logout' %}">Logout</a>
+                            <a class="logout-confirm navlink-style" data-title="Logout Confirmation" href="{% url 'auth_logout' %}">Logout</a>
                         {% endif %}
                     </li>
                 </ul>
@@ -98,6 +101,11 @@
         </div>
         <!-- /.container -->
     </nav>
+
+    <button type="button" class="back-to-top btn btn-default btn-lg">
+	    <a href="#"><span class="glyphicon glyphicon-menu-up"></span>
+	    </a>
+    </button>
 
     {% if user.is_authenticated %}
     <div class="container shopping-cart-style">
@@ -172,6 +180,11 @@
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgkfHa1oiTQIVQDwdhoPBpXnJ-oLE07ms&callback=initMap">
     </script>
+
+    <!-- jQuery-Confirm Javascript -->
+    <script src="{% static 'jquery-confirm2/dist/jquery-confirm.min.js' %}"></script>
+
+    <!-- Custom Javascript -->
     <script src="{% static 'js/script.js' %}"></script>
 
 </body>

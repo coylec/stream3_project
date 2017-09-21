@@ -24,16 +24,19 @@ The site has been extensively tested in Chrome, Firefox and Safari. Also made us
 
 ### Existing Features
 - Scrolling Nav
-- Use of Google maps API
-- Contact Form
-- Google Captcha to counter spam bots on contact form
 - User registration and login
 - Account recovery
-- Blog
-- Disqus comments
 - Webstore
+- Contact Form
+- Google Captcha to counter spam bots on contact form
+- Blog
+- Use of Google maps API
+- Disqus comments
 
 ## Bugs
+
+### Existing Bugs
+- The reset password feature will allow you to go through all the steps needed to reset it but it is not currently changing the password stored in the database.
 
 ## Tech Used
 
@@ -64,10 +67,12 @@ The site has been extensively tested in Chrome, Firefox and Safari. Also made us
     - I used **django-registration** to provide user registration functionality which includes a confirmation email and account activation instructions
 - [python-decouple](https://pypi.python.org/pypi/python-decouple)
     - I used **python-decouple** to separate the settings parameters from my source code
-- [pillow]()
-    -
+- [pillow](https://python-pillow.org/)
+    - I used **pillow** to handle image storage and retrieval
 - [mailgun](https://www.mailgun.com/)
     - I used the **Mailgun** API for sending emails.
+- [jquery-confirm](https://craftpip.github.io/jquery-confirm/)
+    - I used **jQuery-Confirm** to help provide the user with a pop-up alert before they logout.
     
 ### Getting the code up and running
 
