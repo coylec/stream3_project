@@ -18,7 +18,7 @@ use the webstore. The frontend incorporates HTML5, CSS and Javascript to give th
 I used several libraries and packages which are listed below to improve the design and functionality and make the site more secure.
 
 ### Testing
-The site has been extensively tested in Chrome, Firefox and Safari. Also made use of some Django tests to text the blog.
+The site has been extensively tested in Chrome, Firefox and Safari. Also made use of some Django tests to test the blog.
 
 ## Features
 
