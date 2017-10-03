@@ -18,10 +18,6 @@
 .contact-style {
     background-color: white;
 }
-.shop-style {
-    /* height: 100%; */
-    /* padding-top: 150px; */
-}
 h2 {
     font-size: 1.5em;
 }
@@ -29,7 +25,6 @@ h2 {
     /* padding-top: 150px; */
 }
 .login-pages p {
-    /* padding-top: 150px; */
     font-size: 16px;
 }
 .login-pages h1 {
@@ -45,27 +40,20 @@ h2 {
     text-align: center;
     text-decoration: none;
 }
-/* Add a hover effect if you want */
 .fa:hover {
     opacity: 0.7;
 }
-
-/* Set a specific color for each brand */
-
 /* Facebook */
 .fa-facebook {
     background: #3B5998;
     color: white;
 }
-
 /* Twitter */
 .fa-twitter {
     background: #55ACEE;
     color: white;
 }
 .blog-style {
-    /* height: 100%; */
-    /* padding-top: 150px; */
     font-family: Arial;
     text-decoration: none;
 
@@ -77,19 +65,16 @@ h2 {
 .thumbnail {
     margin-bottom: 8px;
 }
-
 .img-container {
     overflow: hidden;
     height: 170px;
 }
-
 .img-container img {
     min-width: 280px;
     min-height: 180px;
     max-width: 380px;
     max-height: 280px;
 }
-
 .txt-container {
     overflow: hidden;
     height: 100px;

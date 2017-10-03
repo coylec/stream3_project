@@ -37,6 +37,7 @@ The site has been extensively tested in Chrome, Firefox and Safari. Also made us
 
 ### Existing Bugs
 - The reset password feature will allow you to go through all the steps needed to reset it but it is not currently changing the password stored in the database.
+- Disqus stopped working with the app name I registered and was refusing to load on various attempts to register different names. I reverted to a generic app name that worked previously for the purposes of this project. However because it's a generic name comments from other sites might possibly show up given the way Disqus works.
 
 ## Tech Used
 
@@ -54,7 +55,7 @@ The site has been extensively tested in Chrome, Firefox and Safari. Also made us
 - [django-bower](https://github.com/nvbn/django-bower)
     - I used **django-bower** for frontend package management
 - [django-anymail](https://github.com/anymail/django-anymail)
-    - I used **django-anymail** to integrate Mailgun into my backend to facilitate the sending of emails for the contact form and user registration.
+    - I used **django-anymail** to integrate Mailgun into the backend to facilitate the sending of emails for the contact form and user registration
 - [django-disqus](https://django-disqus.readthedocs.io/en/latest/)
     - I used **django-disqus** to integrate Disqus into the site to facilitate comments on the blog
 - [django-forms-bootstrap](https://github.com/pinax/django-forms-bootstrap)
@@ -62,7 +63,7 @@ The site has been extensively tested in Chrome, Firefox and Safari. Also made us
 - [django-paypal](https://github.com/spookylukey/django-paypal)
     - I used **django-paypal** to integrate PayPal as the payment system for the webstore
 - [django-recaptcha](https://github.com/praekelt/django-recaptcha)
-    - I used **django-captcha** to integrate a Google reCaptcha form field/widget into the contact form to help prevent spam
+    - I used **django-recaptcha** to integrate a Google reCaptcha form field/widget into the contact form to help prevent spam
 - [django-registration](https://django-registration.readthedocs.io/en/2.2/)
     - I used **django-registration** to provide user registration functionality which includes a confirmation email and account activation instructions
 - [python-decouple](https://pypi.python.org/pypi/python-decouple)
@@ -70,10 +71,18 @@ The site has been extensively tested in Chrome, Firefox and Safari. Also made us
 - [pillow](https://python-pillow.org/)
     - I used **pillow** to handle image storage and retrieval
 - [mailgun](https://www.mailgun.com/)
-    - I used the **Mailgun** API for sending emails.
+    - I used the **Mailgun** API for sending emails
 - [jquery-confirm](https://craftpip.github.io/jquery-confirm/)
-    - I used **jQuery-Confirm** to help provide the user with a pop-up alert before they logout.
+    - I used **jQuery-Confirm** to help provide the user with a pop-up alert before they logout
     
 ### Getting the code up and running
+1. Firstly you will need to clone this repository by running the `git clone <project's Github URL>` command
+2. Setup a virtual environment for the project
+3. After you've that done you'll need to install the dependencies listed in the requirements.txt file.
+4. You will then need to create a .env file in your projects root directory. I have included a sample one which you can rename as .env and add your own secret keys etc. Alternatively you can edit the settings file directly.
+5. You will now need to run the `python manage.py migrate` command.
+6. Your can view your project on localhost:8000 by running `python manage.py runserver`.
+7. Note, if you get an error saying 'no module paypal.standard' please try reinstalling django-paypal.
+
 
 

@@ -97,7 +97,6 @@ ul.errorlist {
 
 
 #header {
-    /*padding:0 100px;*/
     font-size:18px;
     overflow:auto;
 }
@@ -111,7 +110,6 @@ ul.errorlist {
 
 #header .logo {
     font-family: 'Ubuntu', sans-serif;
-    /*float:left;*/
     color:#333;
     font-size:22px;
     margin-right:10%;
@@ -128,9 +126,7 @@ ul.errorlist {
 }
 
 #sidebar {
-    /*width:220px;*/
     padding:30px 20px 0 0;
-    /*float:left;*/
 }
 
 #sidebar ul{
@@ -159,23 +155,15 @@ ul.errorlist {
 
 #main {
     padding-top: 20px;
-    /*float:left;*/
-    /*width: 96%;*/
-    /*margin-right:-220px;*/
-    /*overflow:hidden;*/
 }
 
 .product-list .item {
-    /*width:25%;*/
     padding:0 20px 10px 0;
-    /*float:left;*/
     text-align:center;
-    /*line-height:1.2;*/
     font-size: 20px;
 }
 
 .product-list .item img {
-    /*width:100%;*/
     margin-bottom:8px;
 }
 

@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'im@erkv_mstkwg7p1sf66#37zb*sc^ostzk*^p@!0%g%8b3oly'
+SECRET_KEY = config('PROJECT_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
@@ -185,5 +185,5 @@ MEDIA_URL = '/media/'
 
 CART_SESSION_ID = 'cart'
 
-PAYPAL_RECEIVER_EMAIL = 'conradcoyle-facilitator@gmail.com'
+PAYPAL_RECEIVER_EMAIL = config('PAYPAL_RECEIVER')
 PAYPAL_TEST = True
