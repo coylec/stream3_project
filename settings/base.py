@@ -23,10 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('PROJECT_SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = []
 SITE_ID = 2
 
 
@@ -55,10 +53,6 @@ INSTALLED_APPS = [
     'payment',
 ]
 
-# TEMPLATE_LOADERS = (
-#    'django.template.loaders.filesystem.Loader',
-#   'django.template.loaders.app_directories.Loader',
-# )
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -91,16 +85,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'stream3_project.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 ACCOUNT_ACTIVATION_DAYS = 7
 
@@ -155,14 +139,10 @@ STATICFILES_FINDERS = (
 
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')
 
-# BOWER_PATH = '/user/bin/bower'
-
 BOWER_INSTALLED_APPS = (
     'bootstrap',
     'jquery',
 )
-
-# TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
 
 ANYMAIL = {
     "MAILGUN_API_KEY": config('MAILGUN_KEY'),
@@ -172,18 +152,7 @@ ANYMAIL = {
 EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
 DEFAULT_FROM_EMAIL = config('FROM_EMAIL')
 
-
-RECAPTCHA_PUBLIC_KEY = config('CAP_PUB_KEY')
-RECAPTCHA_PRIVATE_KEY = config('CAP_PRI_KEY')
-
-NOCAPTCHA = config('NOCAPTCHA', cast=bool)
-
-DISQUS_WEBSITE_SHORTNAME = config('DISQUS_NAME')
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
 CART_SESSION_ID = 'cart'
-
-PAYPAL_RECEIVER_EMAIL = config('PAYPAL_RECEIVER')
-PAYPAL_TEST = True
