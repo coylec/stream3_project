@@ -11,7 +11,6 @@ DATABASES = {
 }
 
 SITE_URL = 'https://coylec-streamthree-project.herokuapp.com'
-ALLOWED_HOSTS.append('coylec-streamthree-project.herokuapp.com')
 
 PAYPAL_RECEIVER_EMAIL = config('PAYPAL_RECEIVER')
 PAYPAL_TEST = True
