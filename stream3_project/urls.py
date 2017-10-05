@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls import include, url
-from django.contrib import admin
-from home import views
-from contact import views as contact_views
-from django.views.static import serve
-from .settings import MEDIA_ROOT
 from django.conf.urls.static import static
+from django.contrib import admin
+from django.views.static import serve
 
+from contact import views as contact_views
+from home import views
+from stream3_project.settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
