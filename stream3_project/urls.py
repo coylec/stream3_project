@@ -21,7 +21,7 @@ from django.views.static import serve
 
 from contact import views as contact_views
 from home import views
-from stream3_project.settings import MEDIA_ROOT
+from settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
