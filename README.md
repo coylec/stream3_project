@@ -84,5 +84,5 @@ The site has been extensively tested in Chrome, Firefox and Safari. Also made us
 6. Your can view your project on localhost:8000 by running `python manage.py runserver`.
 7. Note, if you get an error saying 'no module paypal.standard' please try reinstalling django-paypal.
 
-
+8. You can check out my site [here](https://coylec-streamthree-project.herokuapp.com/).
 
