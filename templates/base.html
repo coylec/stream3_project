@@ -44,11 +44,10 @@
                 </button>
                 {% if request.path == '/' %}
                     <a class="logo-spacer page-scroll" href="#page-top">
-                    <img src="{% static 'images/mrcrumb_logo.jpg' %}" class="img-responsive"></a>
                 {% else %}
                     <a class="logo-spacer" href="/">
-                    <img src="{% static 'images/mrcrumb_logo.jpg' %}" class="img-responsive"></a>
                 {% endif %}
+                    <img src="{% static 'images/mrcrumb_logo.jpg' %}" class="img-responsive"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -80,21 +79,19 @@
                         {% endif %}
                     </li>
                     <li>
-                        <a class="navlink-style" href="/shop/#webstore">Online Shop</a>
+                        <a class="navlink-style" href="/shop/" data-target="#webstore">Online Shop</a>
                     </li>
                     <li>
                         <a class="navlink-style" href="/blog/" data-target="#blog">Blog</a>
                     </li>
-                     <li>
-                        {% if user.is_authenticated %}
+                    {% if user.is_authenticated %}
+                        <li>
                             <a class="navlink-style" href="{% url 'profile' %}" data-target="#profile">Account</a>
-                        {% endif %}
-                    </li>
-                    <li>
-                        {% if user.is_authenticated %}
+                        </li>
+                        <li>
                             <a class="logout-confirm navlink-style" data-title="Logout Confirmation" href="{% url 'auth_logout' %}">Logout</a>
-                        {% endif %}
-                    </li>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
