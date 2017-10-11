@@ -80,7 +80,7 @@
                         {% endif %}
                     </li>
                     <li>
-                        <a class="navlink-style" href="/shop/" data-target="#webstore">Online Shop</a>
+                        <a class="navlink-style" href="/shop/#webstore">Online Shop</a>
                     </li>
                     <li>
                         <a class="navlink-style" href="/blog/" data-target="#blog">Blog</a>
@@ -176,10 +176,8 @@
     <script src="{% static 'bootstrap/dist/js/jquery.easing.min.js' %}"></script>
     <script src="{% static 'bootstrap/dist/js/scrolling-nav.js' %}"></script>
 
-    <!-- Google Maps API -->
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgkfHa1oiTQIVQDwdhoPBpXnJ-oLE07ms&callback=initMap">
-    </script>
+    {% block page_scripts %}
+    {% endblock %}
 
     <!-- jQuery-Confirm Javascript -->
     <script src="{% static 'jquery-confirm2/dist/jquery-confirm.min.js' %}"></script>
