@@ -26,6 +26,7 @@
                 </div>
             </div>
             <hr>
+            <!-- Only display new post button if user is staff member -->
             {% if user.is_staff %}
             <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">New Post</button>
             {% endif %}

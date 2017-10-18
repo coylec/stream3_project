@@ -18,7 +18,7 @@
                     <p>{{ post.content | linebreaks }}</p>
                     <p><button class="btn btn-default" onclick="location.href='/blog'">Back To Blog</button></p>
                     {% if user.is_staff %}
-                    <button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}'">Edit</button>
+                        <button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}'">Edit</button>
                     {% endif %}
                     <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}</p>
                     {% set_disqus_title post.title %}
