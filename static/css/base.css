@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
 body { 
     margin:0;
@@ -202,7 +202,7 @@ ul.errorlist {
 
 .order-info {
     float:right;
-    width:300px;
+    width:500px;
     background:#efefef;
     padding:10px 20px;
     color:#333;

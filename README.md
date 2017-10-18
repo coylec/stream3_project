@@ -18,7 +18,7 @@ use the webstore. The frontend incorporates HTML5, CSS and Javascript to give th
 I used several libraries and packages which are listed below to improve the design and functionality and make the site more secure.
 
 ### Testing
-The site has been extensively tested in Chrome, Firefox and Safari. Also made use of some Django tests to test the blog.
+The site has been extensively tested in Chrome, Firefox and Safari.
 
 ## Features
 
@@ -38,6 +38,14 @@ The site has been extensively tested in Chrome, Firefox and Safari. Also made us
 ### Existing Bugs
 - The reset password feature will allow you to go through all the steps needed to reset it but it is not currently changing the password stored in the database.
 - Disqus stopped working with the app name I registered and was refusing to load on various attempts to register different names. I reverted to a generic app name that worked previously for the purposes of this project. However because it's a generic name comments from other sites might possibly show up given the way Disqus works.
+- Currently new users will not be able to register an account. Unfortunately after I deployed the site to Heroku I discovered that I cannot verify the domain
+with Mailgun unless I have a custom domain. This means that I can only operate it on a sandbox account which will only send emails to verified recipients. If 
+you would like me to add you to the verified recipients for testing purposes please email me [here](mailto:coylec.devwork@gmail.com). Otherwise you can use the 
+following credentials to login in order to view the shopping cart etc.:
+
+- Username: test_live
+
+- Password: testing12
 
 ## Tech Used
 
@@ -84,5 +92,5 @@ The site has been extensively tested in Chrome, Firefox and Safari. Also made us
 6. Your can view your project on localhost:8000 by running `python manage.py runserver`.
 7. Note, if you get an error saying 'no module paypal.standard' please try reinstalling django-paypal.
 
-
+8. You can check out my site on Heroku [here](https://coylec-streamthree-project.herokuapp.com/).
 

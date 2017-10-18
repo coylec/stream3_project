@@ -44,11 +44,10 @@
                 </button>
                 {% if request.path == '/' %}
                     <a class="logo-spacer page-scroll" href="#page-top">
-                    <img src="{% static 'images/mr_crumb _logo.jpg' %}" class="img-responsive"></a>
                 {% else %}
                     <a class="logo-spacer" href="/">
-                    <img src="{% static 'images/mr_crumb _logo.jpg' %}" class="img-responsive"></a>
                 {% endif %}
+                    <img src="{% static 'images/mrcrumb_logo.jpg' %}" class="img-responsive"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -85,16 +84,15 @@
                     <li>
                         <a class="navlink-style" href="/blog/" data-target="#blog">Blog</a>
                     </li>
-                     <li>
-                        {% if user.is_authenticated %}
+                    <!-- Only display these links if user is logged in -->
+                    {% if user.is_authenticated %}
+                        <li>
                             <a class="navlink-style" href="{% url 'profile' %}" data-target="#profile">Account</a>
-                        {% endif %}
-                    </li>
-                    <li>
-                        {% if user.is_authenticated %}
+                        </li>
+                        <li>
                             <a class="logout-confirm navlink-style" data-title="Logout Confirmation" href="{% url 'auth_logout' %}">Logout</a>
-                        {% endif %}
-                    </li>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -102,11 +100,13 @@
         <!-- /.container -->
     </nav>
 
+    <!-- Back to top button -->
     <button type="button" class="back-to-top btn btn-default btn-lg">
 	    <a href="#"><span class="glyphicon glyphicon-menu-up"></span>
 	    </a>
     </button>
 
+    <!-- Display shopping cart is user is logged in -->
     {% if user.is_authenticated %}
     <div class="container shopping-cart-style">
         <div id="header">
@@ -129,6 +129,7 @@
     </div>
     {% endif %}
 
+    <!-- Main content. Add or remove padding depending on whether user is logged in -->
     {% if user.is_authenticated %}
         <div class="container remove-padding">
     {% else %}
@@ -144,6 +145,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
@@ -176,10 +178,9 @@
     <script src="{% static 'bootstrap/dist/js/jquery.easing.min.js' %}"></script>
     <script src="{% static 'bootstrap/dist/js/scrolling-nav.js' %}"></script>
 
-    <!-- Google Maps API -->
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgkfHa1oiTQIVQDwdhoPBpXnJ-oLE07ms&callback=initMap">
-    </script>
+    <!-- Google Map script -->
+    {% block page_scripts %}
+    {% endblock %}
 
     <!-- jQuery-Confirm Javascript -->
     <script src="{% static 'jquery-confirm2/dist/jquery-confirm.min.js' %}"></script>

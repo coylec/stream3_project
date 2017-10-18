@@ -1,3 +1,4 @@
+/* Google Map */
 function initMap() {
     var finea = {lat: 53.779720, lng: -7.385282};
 
@@ -11,7 +12,7 @@ function initMap() {
     });
 }
 
-
+/* Back to top button */
 $(document).ready(function() {
 
 	var offset = 10;
@@ -44,7 +45,7 @@ $(".back-to-top").click(function(event) {
 
 	});
 
-
+/* Logout confirm popup */
 $('.logout-confirm').confirm({
     content: 'If you logout you will lose the contents of your shopping cart!',
     buttons: {

@@ -12,3 +12,5 @@ media
 
 # Decouple variables
 .env
+
+.DS_Store
