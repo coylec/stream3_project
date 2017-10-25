@@ -39,7 +39,8 @@ The site has been extensively tested in Chrome, Firefox and Safari.
 - The reset password feature will allow you to go through all the steps needed to reset it but it is not currently changing the password stored in the database.
 - Disqus stopped working with the app name I registered and was refusing to load on various attempts to register different names. I reverted to a generic app name that worked previously for the purposes of this project. However because it's a generic name comments from other sites might possibly show up given the way Disqus works.
 - Currently new users will not be able to register an account. Unfortunately after I deployed the site to Heroku I discovered that I cannot verify the domain
-with Mailgun unless I have a custom domain. This means that I can only operate it on a sandbox account which will only send emails to verified recipients. If 
+with Mailgun unless I have a custom domain. This means that I can only operate it on a sandbox account which will only send emails to verified recipients. 
+The registration system for this site relies on the user receiving a verification link via email. If 
 you would like me to add you to the verified recipients for testing purposes please email me [here](mailto:coylec.devwork@gmail.com). Otherwise you can use the 
 following credentials to login in order to view the shopping cart etc.:
 
