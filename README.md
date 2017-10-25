@@ -20,7 +20,7 @@ use the webstore. The frontend incorporates HTML5, CSS and Javascript to give th
 I used several libraries and packages which are listed below to improve the design and functionality and make the site more secure.
 
 ### Testing
-The site has been extensively tested in Chrome, Firefox and Safari.
+The site has been extensively tested in Chrome, Firefox and Safari. Chrome device mode was used to test the site for mobile responsiveness.
 
 ## Features
 
@@ -40,6 +40,8 @@ The site has been extensively tested in Chrome, Firefox and Safari.
 ### Existing Bugs
 - The reset password feature will allow you to go through all the steps needed to reset it but it is not currently changing the password stored in the database.
 - Disqus stopped working with the app name I registered and was refusing to load on various attempts to register different names. I reverted to a generic app name that worked previously for the purposes of this project. However because it's a generic name comments from other sites might possibly show up given the way Disqus works.
+- On smaller screen sizes the collapsible navigation menu does not close by itself when clicking links to sections of the homepage. It works as expected with other pages.
+- The Online Shop and Blog links in the navigation menu do not highlight until the user starts to scroll down the page.
 - Currently new users will not be able to register an account unless they have been added as a verified email recipient with the email provider. Unfortunately after I deployed the site to Heroku I discovered that I cannot verify the domain
 with Mailgun unless I have a custom domain. This means that I can only operate it on a sandbox account which will only send emails to verified recipients. 
 The registration system for this site relies on the user receiving a verification link via email. The registration system does work so if 
